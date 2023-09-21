@@ -17,4 +17,69 @@
 .page {
   min-inline-size: 320px;
   min-block-size: 100dvb;
+  font-family: var(--font-family, sans-serif);
+  font-weight: var(--font-card-text-weight);
+  font-size: 18px;
+  color: var(--accent-color);
+  background-color: var(--background-color, #fff);
+  background-image: var(--background-image);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 50px;
+}
+
+.header {
+  background-color: #fff;
+  width: var(--card-width);
+  margin-block-start: 100px;
+  margin-block-end: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: var(--font-family-accent);
+  text-transform: uppercase;
+}
+
+.header__logo {
+  font-family: var(--font-family-accent);
+  font-size: clamp(3.063rem, 2.71rem + 1.502vw, 4.063rem);
+  margin-block-start: clamp(120px, 37.36%, 136px);
+  /*   justify-self: center; */
+}
+
+.header__title {
+  font-size: 23px;
+  margin-block-start: 20px;
+}
+
+.header__theme-menu {
+  font-size: 14px;
+  margin-block-start: 25px;
+}
+
+.theme-menu__list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.theme-menu__button {
+  text-transform: uppercase;
+}
+
+@supports (font-variation-settings: normal) {
+  .page {
+    font-family: "Inter-Variable", sans-serif;
+    font-weight: var(--font-card-text-weight);
+  }
+}
+
+@media (width <= 992px) {
+  :root {
+    --card-width: 100%;
+  }
 }
