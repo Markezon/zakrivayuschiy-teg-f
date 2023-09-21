@@ -191,6 +191,7 @@
 }
 
 .card__like-button {
+  position: relative;
   border: 2px solid var(--accent-color);
   display: flex;
   min-width: 130px;
@@ -198,6 +199,98 @@
   padding: 9px 17px;
   justify-content: center;
   align-items: center;
+  overflow: hidden;
+}
+
+.save__button {
+  position: relative;
+  background-color: var(--background-color);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding-block: 15px;
+  padding-inline-start: 19px;
+  margin-block-end: 100px;
+  inline-size: clamp(19.125rem, 18.487rem + 2.723vw, 20.938rem);
+  color: var(--accent-color);
+  font-family: var(--font-family-accent);
+  font-size: var(--button-font-size);
+  font-style: normal;
+  font-weight: inherit;
+  line-height: 90%;
+  overflow: hidden;
+}
+
+.card__like-button:focus {
+  outline: none;
+  box-shadow: 2px 2px 0px 0px var(--accent-color);
+  transition: box-shadow 0.3s;
+  transition-timing-function: ease;
+}
+
+.save__button:focus {
+  outline: none;
+  box-shadow: 2px 2px 0px 0px var(--accent-color);
+  transition: box-shadow 0.3s;
+  transition-timing-function: ease;
+}
+
+.card__like-button::after {
+  content: "";
+  position: absolute;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background-color: var(--accent-color);
+}
+
+.save__button::after {
+  content: "";
+  position: absolute;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background-color: var(--accent-color);
+}
+
+.card__like-button:hover::after {
+  left: 0px;
+  transition: all 0.5s;
+  transition-timing-function: ease-in-out;
+}
+
+.card__like-button:not(:hover)::after {
+  left: -100%;
+  transition: all 0.5s;
+  transition-timing-function: ease-in-out;
+}
+
+.save__button:hover::after {
+  left: 0px;
+  transition: all 0.5s;
+  transition-timing-function: ease-in-out;
+}
+
+.save__button:not(:hover)::after {
+  left: -100%;
+  transition: all 0.5s;
+  transition-timing-function: ease-in-out;
+}
+
+.floppy__svg {
+  width: 21px;
+  height: 21px;
+}
+
+.card__icon-button {
+  border: 2px solid transparent;
+}
+
+.card__icon-button:focus {
+  outline: none;
+  border: 2px solid var(--accent-color);
+  transition: border 0.3s;
+  transition-timing-function: ease;
 }
 
 @keyframes selected {
