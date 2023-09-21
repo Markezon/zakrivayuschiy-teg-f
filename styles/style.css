@@ -68,6 +68,7 @@
   flex-direction: column;
   gap: 14px;
 }
+
 .theme-menu__button {
   position: relative;
   text-transform: uppercase;
@@ -79,11 +80,47 @@
   height: 14px;
   position: absolute;
   left: -20px;
+  animation: selected 0.5s infinite ease-in-out alternate;
+}
+
+.theme-menu__button:focus {
+  outline: none;
+}
+
+.theme-menu__button::after {
+  content: "";
+  display: block;
+  width: 0%;
+  height: 2px;
+  margin-top: 2px;
+  background-color: var(--accent-color);
+  transition: none;
+}
+
+.theme-menu__button:focus::after {
+  width: 100%;
+  background-color: var(--accent-color);
+  transition: width 0.3s;
+  transition-timing-function: ease;
+}
+
+.theme-menu__item:hover .theme-menu__button {
+  opacity: 0.6;
+  transition: opacity 0.3s;
+  transition-timing-function: ease;
+}
+
+.theme-menu__button:disabled {
+  pointer-events: none;
+  opacity: 0.6;
+  transition: opacity 0.3s;
+  transition-timing-function: ease;
 }
 
 .content {
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 54px;
 }
 
@@ -105,6 +142,27 @@
   object-fit: cover;
   border-top: 2px solid var(--accent-color);
   border-bottom: 2px solid var(--accent-color);
+}
+
+.card__figure {
+  position: relative;
+}
+
+.card__picture-label {
+  position: absolute;
+  top: 25px;
+  right: clamp(0.688rem, 0.379rem + 1.315vw, 1.563rem);
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-transform: uppercase;
+  color: var(--accent-color);
+  font-family: var(--font-family-accent, sans-serif);
+  opacity: 0.5;
+  text-shadow: -1px 0 var(--text-stroke-color), 0 1px var(--text-stroke-color),
+    1px 0 var(--text-stroke-color), 0 -1px var(--text-stroke-color);
+  mix-blend-mode: hard-light;
 }
 
 .card__text_wrapper {
@@ -142,10 +200,30 @@
   align-items: center;
 }
 
+@keyframes selected {
+  0% {
+    transform: translateX(0px);
+  }
+  100% {
+    transform: translateX(4px);
+  }
+}
+
 @supports (font-variation-settings: normal) {
   .page {
     font-family: "Inter-Variable", sans-serif;
     font-weight: var(--font-card-text-weight);
+  }
+}
+
+@supports (
+  (text-stroke: 1px var(--text-stroke-color)) or
+    (-webkit-text-stroke: 1px var(--text-stroke-color))
+) {
+  .card__picture-label {
+    -webkit-text-stroke: 1px var(--text-stroke-color);
+    text-stroke: 1px var(--text-stroke-color);
+    text-shadow: none;
   }
 }
 

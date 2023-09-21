@@ -52,14 +52,19 @@
         <p class="card__title">Фритрек и нулевой спринт: Подготовка к работе</p>
 
         <figure class="card__figure">
-          <source srcset="./images/car.avif" type="image/avif" />
-          <source srcset="./images/car.webp" type="image/webp" />
-          <img
-            loading="lazy"
-            class="card__picture"
-            src="./images/car.jpg"
-            alt="изображение пиксельной фургона-дома на колесах"
-          />
+          <picture>
+            <source srcset="./images/car.avif" type="image/avif" />
+            <source srcset="./images/car.webp" type="image/webp" />
+            <img
+              loading="lazy"
+              class="card__picture"
+              src="./images/car.jpg"
+              alt="изображение пиксельной фургона-дома на колесах"
+            />
+          </picture>
+          <figcaption class="card__picture-label">
+            <p>&lt/HTML&gt</p>
+          </figcaption>
         </figure>
 
         <div class="card__text_wrapper">
