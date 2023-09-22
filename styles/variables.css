@@ -27,4 +27,7 @@
   --button-font-size: 14px;
   --text-stroke-color: #fff;
   --blend-color: #fff;
+  --heart-contour: #000;
+  --heart-fill: #FF0000;
+
 }
