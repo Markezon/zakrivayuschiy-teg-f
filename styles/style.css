@@ -46,6 +46,7 @@
   font-family: var(--font-family-accent);
   text-transform: uppercase;
   line-height: normal;
+  border: 2px solid var(--accent-color);
 }
 
 .header__logo {
@@ -89,6 +90,7 @@
 
 .theme-menu__button::after {
   content: "";
+  position: absolute;
   display: block;
   width: 0%;
   height: 2px;
@@ -133,7 +135,7 @@
 .card__title {
   font-weight: var(--font-card-title-weight);
   font-size: inherit;
-  padding: 3px 10px;
+  padding: 5px 10px;
 }
 
 .card__picture {
@@ -184,7 +186,7 @@
   display: flex;
   justify-content: end;
   align-items: center;
-  gap: 12px;
+  gap: 2px;
 }
 
 .button {
@@ -476,6 +478,35 @@
 .floppy__dialog {
   width: 39px;
   height: 39px;
+}
+
+/* filters */
+.filter_1 {
+  filter: sepia(80%);
+}
+
+.filter_2 {
+  filter: hue-rotate(-90deg);
+}
+
+.filter_3 {
+  filter: saturate(158%);
+}
+
+.filter_4 {
+  filter: blur(0.2rem);
+}
+
+.filter_5 {
+  filter: contrast(20%);
+}
+
+.filter_6 {
+  filter: invert(0.7);
+}
+
+.filter_7 {
+  filter: brightness(200%) saturate(60%) hue-rotate(90deg);
 }
 
 /* @@@ */
