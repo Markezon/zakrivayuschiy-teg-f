@@ -49,7 +49,9 @@
     </header>
     <main class="content">
       <article class="card">
-        <p class="card__title">Фритрек и нулевой спринт: Подготовка к работе</p>
+        <h2 class="card__title">
+          Фритрек и нулевой спринт: Подготовка к работе
+        </h2>
 
         <figure class="card__figure">
           <picture>
@@ -120,13 +122,36 @@
         </div>
       </article>
 
-      <button type="button" class="button save__button">
-        <svg class="floppy__svg">
+      <button
+        type="button"
+        class="button save__button"
+        onclick="window['dialog-id'].showModal()"
+        aria-controls="dialog-id"
+      >
+        <svg class="floppy__svg" viewBox="0 0 21 21">
           <use href="./svg/floppy.svg#floppy"></use>
         </svg>
         <span class="button__text">Сохранить на память</span>
       </button>
     </main>
+
+    <dialog id="dialog-id" class="dialog">
+      <div class="dialog__wrapper">
+        <div class="svg__wrapper">
+          <svg class="floppy__dialog" viewBox="0 0 21 21">
+            <use href="./svg/floppy.svg#floppy"></use>
+          </svg>
+        </div>
+
+        <span class="dialog__text">Вставьте дискету, чтобы продолжить</span>
+      </div>
+      <form method="dialog">
+        <button type="submit" class="button button__dialog">
+          <span class="button__text">ок</span>
+        </button>
+      </form>
+    </dialog>
+
     <script src="./scripts/like.js"></script>
   </body>
 </html>
