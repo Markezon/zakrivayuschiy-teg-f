@@ -5,9 +5,8 @@
 ✦ не забудьте описать стили для изменения темы через медизапрос пользовательских предпочтений
 */
 :root.theme-light {
+  --card-width: clamp(23.438rem, 16.373rem + 30.141vw, 43.5rem);
   --accent-color: #000;
-  --font-card-text-weight: 400;
-  --font-card-title-weight: 700;
   --background-color: #fff;
   --background-image: repeating-linear-gradient(
       transparent,
@@ -23,6 +22,15 @@
       #d3d3d3 4px
     ),
     linear-gradient(to bottom, #e7e7e7 0.01%, #1a1a1a);
+  --font-family-accent: "PressStart2P-Regular";
+  --font-family: "Inter-Variable";
+  --font-card-text-weight: 400;
+  --font-card-title-weight: 700;
+  --font-size: 18px;
+  --line-height: 21px;
+  --button-font-size: 14px;
+  --text-stroke-color: #fff;
+  --blend-color: #fff;
 }
 
 :root.theme-dark {
@@ -44,13 +52,14 @@
       #000 4px
     ),
     linear-gradient(to bottom, #007f0c 0.01%, #004306);
+  --text-stroke-color: #000;
+  --blend-color: #00cc14;
 }
 
 @media (prefers-color-scheme: light) {
   :root {
+    --card-width: clamp(23.438rem, 16.373rem + 30.141vw, 43.5rem);
     --accent-color: #000;
-    --font-card-text-weight: 400;
-    --font-card-title-weight: 700;
     --background-color: #fff;
     --background-image: repeating-linear-gradient(
         transparent,
@@ -66,6 +75,15 @@
         #d3d3d3 4px
       ),
       linear-gradient(to bottom, #e7e7e7 0.01%, #1a1a1a);
+    --font-family-accent: "PressStart2P-Regular";
+    --font-family: "Inter-Variable";
+    --font-card-text-weight: 400;
+    --font-card-title-weight: 700;
+    --font-size: 18px;
+    --line-height: 21px;
+    --button-font-size: 14px;
+    --text-stroke-color: #fff;
+    --blend-color: #fff;
   }
 }
 
@@ -89,5 +107,7 @@
         #000 4px
       ),
       linear-gradient(to bottom, #007f0c 0.01%, #004306);
+    --text-stroke-color: #000;
+    --blend-color: #00cc14;
   }
 }

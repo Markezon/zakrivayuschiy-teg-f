@@ -35,7 +35,7 @@
 }
 
 .header {
-  background-color: #fff;
+  background-color: var(--background-color);
   inline-size: var(--card-width);
   margin-block-start: 100px;
   margin-block-end: 50px;
@@ -126,8 +126,8 @@
 
 .card {
   inline-size: var(--card-width);
-  background-color: var(--card-background);
   border: 2px solid var(--accent-color);
+  background-color: var(--background-color);
 }
 
 .card__title {
@@ -219,6 +219,7 @@
   font-weight: inherit;
   line-height: 90%;
   overflow: hidden;
+  border: 2px solid var(--accent-color);
 }
 
 .card__like-button:focus {
@@ -291,6 +292,20 @@
   border: 2px solid var(--accent-color);
   transition: border 0.3s;
   transition-timing-function: ease;
+}
+
+.button__text {
+  position: relative;
+  z-index: 2;
+  color: var(--blend-color);
+  mix-blend-mode: difference;
+}
+
+.floppy__svg {
+  position: relative;
+  z-index: 2;
+  color: var(--blend-color);
+  mix-blend-mode: difference;
 }
 
 @keyframes selected {
