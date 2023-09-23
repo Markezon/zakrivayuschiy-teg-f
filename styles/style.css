@@ -262,25 +262,25 @@
 
 .card__like-button:hover::after {
   left: 0px;
-  transition: all 0.5s;
+  transition: left 0.5s;
   transition-timing-function: ease-in-out;
 }
 
 .card__like-button:not(:hover)::after {
   left: -100%;
-  transition: all 0.5s;
+  transition: left 0.5s;
   transition-timing-function: ease-in-out;
 }
 
 .save__button:hover::after {
   left: 0px;
-  transition: all 0.5s;
+  transition: left 0.5s;
   transition-timing-function: ease-in-out;
 }
 
 .save__button:not(:hover)::after {
   left: -100%;
-  transition: all 0.5s;
+  transition: left 0.5s;
   transition-timing-function: ease-in-out;
 }
 
@@ -465,13 +465,13 @@
 
 .button__dialog:hover::after {
   left: 0px;
-  transition: all 0.5s;
+  transition: left 0.5s;
   transition-timing-function: ease-in-out;
 }
 
 .button__dialog:not(:hover)::after {
   left: -100%;
-  transition: all 0.5s;
+  transition: left 0.5s;
   transition-timing-function: ease-in-out;
 }
 
