@@ -164,7 +164,6 @@
   font-style: normal;
   font-weight: 400;
   line-height: normal;
-  text-transform: uppercase;
   color: var(--accent-color);
   font-family: var(--font-family-accent, sans-serif);
   opacity: 0.5;
