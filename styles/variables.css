@@ -1,6 +1,6 @@
 /* В этом файле будут храниться все значения переменных в исходном состоянии, а так же их изменения в зависимости от ширины устройства */
 :root {
-  --card-width: clamp(23.438rem, 16.373rem + 30.141vw, 43.5rem);
+  --card-width: clamp(23.438rem, 16.285rem + 30.516vw, 43.75rem);
   --accent-color: #000;
   --background-color: #fff;
   --background-image: repeating-linear-gradient(
@@ -28,6 +28,5 @@
   --text-stroke-color: #fff;
   --blend-color: #fff;
   --heart-contour: #000;
-  --heart-fill: #FF0000;
-
+  --heart-fill: #ff0000;
 }
