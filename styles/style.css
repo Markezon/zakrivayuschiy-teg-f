@@ -432,7 +432,7 @@
 }
 
 .filter_5 {
-  filter: contrast(20%);
+  filter: contrast(150%);
 }
 
 .filter_6 {
@@ -440,7 +440,7 @@
 }
 
 .filter_7 {
-  filter: brightness(200%) saturate(60%) hue-rotate(90deg);
+  filter: brightness(200%) opacity(0.8);
 }
 
 /* @@@ */
