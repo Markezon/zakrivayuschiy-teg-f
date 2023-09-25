@@ -20,7 +20,6 @@
   font-family: var(--font-family, sans-serif);
   font-variation-settings: "wght" var(--font-card-text-weight);
   font-size: var(--font-size, 18px);
-  line-height: var(--line-height);
   color: var(--accent-color);
   background-color: var(--background-color, #fff);
   background-image: var(--background-image);
@@ -32,6 +31,7 @@
   flex-direction: column;
   align-items: center;
   gap: 50px;
+  margin: 0 auto;
 }
 
 .header {
@@ -45,7 +45,7 @@
   align-items: center;
   font-family: var(--font-family-accent, sans-serif);
   text-transform: uppercase;
-  line-height: normal;
+  line-height: 1;
   outline: 2px solid var(--accent-color);
 }
 
@@ -62,6 +62,7 @@
 .header__theme-menu {
   font-size: var(--button-font-size);
   margin-block-start: 25px;
+  margin-inline-start: 18px;
 }
 
 .theme-menu__list {
@@ -137,10 +138,9 @@
 }
 
 .card__title {
-  font-weight: var(--font-card-title-weight);
+  font-variation-settings: "wght" var(--font-card-title-weight);
   font-size: inherit;
   padding: 5px 12px 3px 12px;
-  line-height: normal;
 }
 
 .card__picture {
@@ -163,7 +163,6 @@
   font-size: 14px;
   font-style: normal;
   font-weight: 400;
-  line-height: normal;
   color: var(--accent-color);
   font-family: var(--font-family-accent, sans-serif);
   opacity: 0.5;
@@ -174,6 +173,7 @@
 
 .card__text_wrapper {
   padding: 25px 27px 27px 27px;
+  line-height: var(--line-height);
 }
 
 .card__text {
@@ -190,7 +190,7 @@
   display: flex;
   justify-content: end;
   align-items: center;
-  gap: 2px;
+  gap: 4px;
 }
 
 .button {
@@ -206,7 +206,6 @@
   padding: 9px 17px;
   color: var(--accent-color);
   font-style: normal;
-  font-weight: inherit;
 }
 
 .card__like-button {
@@ -221,8 +220,6 @@
   background-color: var(--background-color);
   gap: 8px;
   padding-block: 15px;
-  padding-inline-start: 19px;
-  margin-block-end: 100px;
   inline-size: clamp(19.125rem, 18.487rem + 2.723vw, 20.938rem);
 }
 
@@ -339,6 +336,7 @@
 
 .like-icon {
   height: 38px;
+  margin-block-start: 3px;
 }
 
 .like-icon.is-liked .core {
@@ -383,28 +381,23 @@
   color: var(--accent-color);
   font-family: var(--font-family-accent, sans-serif);
   font-size: var(--button-font-size);
+  line-height: 150%;
   padding: 31.5px 32.5px 30.5px 31.5px;
   text-transform: uppercase;
 }
 
 .dialog[open] {
-  display: block;
   margin: auto auto;
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  column-gap: 20px;
 }
 
 .dialog::backdrop {
   background-color: rgb(0 0 0 / 0.75);
 }
 
-.dialog__wrapper {
-  display: flex;
-  gap: 8px;
-  align-items: center;
-  text-align: center;
-}
-
 .button__dialog {
-  margin-block-start: 30px;
   min-width: 100%;
   text-transform: uppercase;
 }
@@ -412,6 +405,17 @@
 .floppy__dialog {
   width: 39px;
   height: 39px;
+  align-self: center;
+}
+
+.dialog__text {
+  grid-column: 2 / 8;
+}
+
+.dialog__form {
+  margin-block-start: 30px;
+  grid-row: 2 / 3;
+  grid-column: 1 / 8;
 }
 
 /* filters */
@@ -498,7 +502,6 @@
   .save__button {
     flex-wrap: wrap;
     flex-direction: column;
-    padding-inline-start: 0px;
   }
   .floppy__svg {
     width: 28px;
